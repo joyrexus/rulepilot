@@ -129,7 +129,7 @@ export class Validator {
       };
     }
 
-    const operators = ["==", "!=", ">", "<", ">=", "<=", "in", "not in", "contains"];
+    const operators = ["==", "!=", ">", "<", ">=", "<=", "in", "not in", "contains", "contains-any"];
     if (!operators.includes(constraint.operator as Operator)) {
       return {
         isValid: false,

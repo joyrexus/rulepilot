@@ -140,6 +140,11 @@ export class Evaluator {
         );
       case "contains":
         return criterion.includes(constraint.value);
+      case "contains-any":
+        return (
+          Array.isArray(constraint.value) &&
+          constraint.value.some(x => criterion.includes(x))
+        );
       default:
         return false;
     }
