@@ -1,5 +1,5 @@
 export type ConditionType = "any" | "all" | "none";
-export type Operator = "==" | "!=" | ">" | "<" | ">=" | "<=" | "in" | "not in";
+export type Operator = "==" | "!=" | ">" | "<" | ">=" | "<=" | "in" | "not in" | "contains";
 
 export interface Constraint {
   field: string;
