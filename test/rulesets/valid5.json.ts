@@ -6,8 +6,18 @@ export const valid5Json: Rule = {
       {
         field: "countries",
         operator: "contains",
-        value: "US",
+        value: "US"
       },
+      {
+        field: "countries",
+        operator: "contains-any",
+        value: ["FR", "GB"]
+      },
+      {
+        field: "word",
+        operator: "contains",
+        value: "phone"
+      }
     ],
   },
 };

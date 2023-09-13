@@ -190,13 +190,13 @@ describe("RulePilot engine correctly", () => {
     ).toEqual(true);
   });
 
-  it("Evaluates a simple ruleset with a contains condition", async () => {
+  it("Evaluates a simple ruleset with a contains and contains-any condition", async () => {
     expect(
-      await RulePilot.evaluate(valid5Json, { countries: ["US", "FR"] })
+      await RulePilot.evaluate(valid5Json, { countries: ["US", "FR"], word: "xylophone" })
     ).toEqual(true);
 
     expect(
-      await RulePilot.evaluate(valid5Json, { countries: ["CA", "FR"] })
+      await RulePilot.evaluate(valid5Json, { countries: ["US", "CA"], word: "trombone" })
     ).toEqual(false);
   });
 });
